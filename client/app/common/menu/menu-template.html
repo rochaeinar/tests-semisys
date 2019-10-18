@@ -1,0 +1,28 @@
+<md-content>
+
+    <div ng-repeat="menu in mainNavigationController.menus">
+
+        <md-divider></md-divider>
+
+        <md-list-item ng-click="toggle.list = !toggle.list">
+            <span flex>{{menu.title}}</span>
+            <md-icon ng-show="!toggle.list" md-svg-icon="../../assets/img/ic_expand_more_18px.svg"></md-icon>
+            <md-icon ng-show="toggle.list" md-svg-icon="../../assets/img/ic_expand_less_18px.svg"></md-icon>
+        </md-list-item>
+        <md-list ng-show="toggle.list">
+            <md-item ng-repeat="item in menu.acctions">
+                <a class="md-button active layout-fill" ui-sref="{{item.link}}"
+                   ng-click="mainNavigationController.current = item.title">
+                    <md-item-content md-ink-ripple layout="row ">
+                        <div class="inset">
+                            <md-icon md-svg-icon="{{item.icon}}"></md-icon>
+                        </div>
+                        <div class="inset">{{item.title}}</div>
+                    </md-item-content>
+                </a>
+            </md-item>
+        </md-list>
+
+    </div>
+
+</md-content>

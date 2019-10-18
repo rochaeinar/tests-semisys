@@ -1,0 +1,44 @@
+<md-content layout="column" layout-padding="" ng-form="editor">
+
+    <div layout="row">
+
+        <md-input-container flex="50">
+            <label>Codigo</label>
+            <input required name="code" ng-model="gestion.code" type="text">
+            <div ng-messages="editor.name.$error">
+                <div ng-message="required">
+                    Codigo es requerido.
+                </div>
+            </div>
+        </md-input-container>
+
+        <md-input-container flex="50">
+            <label>Gestion</label>
+            <input required name="code" ng-model="gestion.period" type="text">
+            <div ng-messages="editor.name.$error">
+                <div ng-message="required">
+                    Gestion es requerido.
+                </div>
+            </div>
+        </md-input-container>
+
+    </div>
+
+    <div layout="row">
+
+        <md-input-container flex="50">
+            <label>Fecha de inicio</label>
+            <md-datepicker ng-model="gestion.start"></md-datepicker>
+        </md-input-container>
+
+        <md-input-container flex="50">
+            <label>Fecha de finalizacion</label>
+            <md-datepicker ng-model="gestion.end"></md-datepicker>
+        </md-input-container>
+
+    </div>
+
+</md-content>
+
+
+

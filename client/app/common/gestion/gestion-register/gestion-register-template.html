@@ -1,0 +1,23 @@
+<md-stepper id="stepper-gestion"
+            md-vertical="false"
+            md-linear="true"
+            md-alternative="true">
+    <md-step md-label="Datos de la gestion">
+        <form name="stepBody1">
+            <md-step-body>
+                <md-content>
+                    <gestion-info gestion="gestion"></gestion-info>
+                </md-content>
+            </md-step-body>
+            <md-step-actions>
+                <md-content layout="row" layout-align="center">
+                    <md-button class="md-primary md-raised" ng-click="add()" ng-disabled="stepBody1.$invalid">
+                        Crear
+                    </md-button>
+                    <span flex="10"></span>
+                    <md-button class="md-primary md-raised" ng-click="cancel()">Cancelar</md-button>
+                </md-content>
+            </md-step-actions>
+        </form>
+    </md-step>
+</md-stepper>

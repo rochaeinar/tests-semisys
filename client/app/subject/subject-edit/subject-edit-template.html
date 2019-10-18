@@ -1,0 +1,20 @@
+<md-content class="layout-fill">
+    <md-toolbar class="tool-bar-doc md-whiteframe-z1">
+        <div class="md-toolbar-tools">
+
+            <span flex></span>
+
+            <md-button class="md-raised md-primary"
+                       ng-click="SubjectEditController.modify()">
+                <md-tooltip>Editar datos de la materia</md-tooltip>
+                <md-icon md-svg-src="../../assets/img/ic_done_48px.svg"></md-icon>
+                Guardar cambios
+            </md-button>
+
+        </div>
+    </md-toolbar>
+
+    <subject-info subject="SubjectEditController.subject"></subject-info>
+
+</md-content>
+

@@ -1,0 +1,18 @@
+<md-content class="layout-fill">
+    <md-toolbar class="tool-bar-doc md-whiteframe-z1">
+        <div class="md-toolbar-tools">
+            <span flex></span>
+            <md-button class="md-raised md-primary"
+                       ng-click="DocentInicioController.showForm()">
+                <md-tooltip>Registrar docente</md-tooltip>
+                <md-icon md-svg-src="../../assets/img/ic_person_add_48px.svg"></md-icon>
+                Registrar
+            </md-button>
+        </div>
+    </md-toolbar>
+
+    <div layout="row" layout-wrap>
+        <docent-card ng-repeat="p in DocentInicioController.docents" person="p"></docent-card>
+    </div>
+
+</md-content>

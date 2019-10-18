@@ -1,0 +1,31 @@
+.login-content {
+    margin: 0;
+    width: 320px;
+}
+
+.login {
+    margin-top: -250px;
+    margin-left: -160px;
+    top: 50%;
+    width: 320px;
+    min-height: 230px;
+    position: absolute;
+    left: 50%;
+}
+
+.login-error {
+    display: flex;
+}
+
+.login-input {
+    width: 100%;
+}
+
+.login-footer {
+    margin-top: 20px;
+}
+
+.login-copyright {
+    float: right;
+    font-size: 15px;
+}

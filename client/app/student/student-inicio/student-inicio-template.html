@@ -1,0 +1,18 @@
+<md-content class="layout-fill">
+    <md-toolbar class="tool-bar-doc md-whiteframe-z1">
+        <div class="md-toolbar-tools">
+            <!--input class="search-input" type="text" id="search" name="name" placeholder="Nombre de estudiante.."-->
+            <span flex></span>
+            <md-button class="md-raised md-primary"
+                       ng-click="StudentInicioController.showForm()">
+                <md-tooltip>Registrar estudiante</md-tooltip>
+                <md-icon md-svg-src="../../assets/img/ic_person_add_48px.svg"></md-icon>
+                Registrar
+            </md-button>
+        </div>
+    </md-toolbar>
+
+    <div layout="row" layout-wrap>
+        <student-card ng-repeat="p in StudentInicioController.persons" person="p"></student-card>
+    </div>
+</md-content>

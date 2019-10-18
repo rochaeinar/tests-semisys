@@ -1,0 +1,42 @@
+<div class="login">
+    <md-toolbar md-scroll-shrink="" ng-if="true" class="ng-scope">
+        <div class="md-toolbar-tools">
+            <img src="../../assets/img/logo64.png" class="logo-header" alt="">
+            <h3>
+                <span class="text-header">Semi Sys</span>
+            </h3>
+        </div>
+    </md-toolbar>
+    <md-whiteframe class="md-whiteframe-2dp" layout>
+        <form name="form" class="login-content" novalidate>
+            <div class="font-24 padding-b24">Inicia sesión para continuar...</div>
+            <div ng-if="loginController.message !== ''" class="login-error">
+                <img src="../../assets/img/icons/error.svg" class="icon-24">
+                <div class="error-login padding-l8">
+                    {{loginController.message}}
+                </div>
+            </div>
+            <div>
+                <md-input-container class="font-15 login-input">
+                    <label>Usuario</label>
+                    <input type="text" ng-model="loginController.username" maxlength="128"
+                           ng-keypress="($event.charCode==13 && loginController.message === '')?loginController.login(loginController.username, loginController.password):return">
+                </md-input-container>
+                <md-input-container class="font-15 login-input">
+                    <label>Contraseña</label>
+                    <input type="password" ng-model="loginController.password" maxlength="128"
+                           ng-keypress="($event.charCode==13 && loginController.message === '')?loginController.login(loginController.username, loginController.password):return">
+                </md-input-container>
+                <br>
+                <md-button id="button-login" class="md-raised md-primary font-15 login-input"
+                           ng-click="loginController.message === ''?loginController.login(loginController.username, loginController.password):''"
+                           ng-disabled="loginController.request === true || loginController.message !== ''">
+                    INICIAR SESIÓN
+                </md-button>
+            </div>
+        </form>
+    </md-whiteframe>
+    <div class="login-footer">
+        <span class="login-copyright">© 2016 ERC Systems</span>
+    </div>
+</div>

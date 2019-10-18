@@ -1,0 +1,16 @@
+.form-size {
+    width: 800px;
+}
+
+.legend-text{
+    font-size: x-small;
+}
+
+.search-input{
+    width: 50%;
+    padding: 5px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}

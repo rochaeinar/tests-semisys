@@ -1,0 +1,28 @@
+<md-card class="card-size">
+    <md-card-title>
+
+        <md-card-title-text>
+            <span class="md-headline"> {{subject.name}}</span>
+            <span class="md-headline"> {{subject.code}}</span>
+            <span class="md-subhead"> Materia </span>
+        </md-card-title-text>
+
+
+        <md-card-actions layout="column">
+
+            <md-button class="md-icon-button" aria-label="Favorite" ng-click="showEditForm(subject)">
+                <md-tooltip>Editar Materia</md-tooltip>
+                <md-icon md-svg-icon="../../assets/img/ic_mode_edit_24px.svg"></md-icon>
+            </md-button>
+
+            <md-button class="md-icon-button" aria-label="Favorite" ng-click="delete(subject._id)">
+                <md-tooltip>Eliminar</md-tooltip>
+                <md-icon md-svg-icon="../../assets/img/ic_clear_24px.svg"></md-icon>
+            </md-button>
+
+        </md-card-actions>
+
+    </md-card-title>
+    <md-card-content>
+    </md-card-content>
+</md-card>

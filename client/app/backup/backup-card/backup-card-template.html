@@ -1,0 +1,24 @@
+<md-card class="card-size">
+    <md-card-title>
+
+        <md-card-title-text>
+            <span class="md-subhead">Backup</span>
+            <span class="md-headline">{{backup}}</span>
+        </md-card-title-text>
+
+        <md-card-actions layout="column">
+
+            <md-button class="md-icon-button" aria-label="Favorite" ng-click="restore(backup)">
+                <md-tooltip>Restaurar</md-tooltip>
+                <md-icon md-svg-icon="../../assets/img/ic_publish_24px.svg"></md-icon>
+            </md-button>
+
+            <md-button class="md-icon-button" aria-label="Favorite" ng-click="delete(backup)">
+                <md-tooltip>Eliminar</md-tooltip>
+                <md-icon md-svg-icon="../../assets/img/ic_clear_24px.svg"></md-icon>
+            </md-button>
+
+        </md-card-actions>
+
+    </md-card-title>
+</md-card>

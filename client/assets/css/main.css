@@ -1,0 +1,16 @@
+.md-whiteframe-2dp {
+    background: white;
+    padding: 32px;
+}
+
+.md-button {
+    margin: 0px !important;
+}
+
+.clear {
+    clear: both;
+}
+
+.cursor {
+    cursor: pointer;
+}

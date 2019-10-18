@@ -1,0 +1,146 @@
+<md-content layout="column" layout-padding="" ng-form="editor">
+
+    <div layout="row">
+
+        <md-input-container flex="50">
+            <label>Nombres</label>
+            <input required name="name" type="text" ng-model="student.firstName">
+            <div ng-messages="editor.name.$error">
+                <div ng-message="required">Nombre es requerido.</div>
+            </div>
+        </md-input-container>
+
+        <md-input-container flex="50">
+            <label>Apellidos</label>
+            <input required name="lastName" type="text" ng-model="student.lastName">
+            <div ng-messages="editor.lastName.$error">
+                <div ng-message="required">Apellido es requerido.</div>
+            </div>
+        </md-input-container>
+
+    </div>
+
+    <div layout="row">
+
+        <md-input-container flex="50">
+            <label>Ciudad de nacimiento</label>
+            <input ng-model="student.birtCity">
+        </md-input-container>
+
+        <md-input-container flex="50">
+            <label>Fecha de nacimiento</label>
+            <md-datepicker ng-model="student.birthDate"></md-datepicker>
+        </md-input-container>
+
+    </div>
+
+    <div layout="row">
+
+        <md-input-container flex="50">
+            <label>Correo electronico</label>
+            <input required type="text" name="mail" ng-model="student.mail" ng-pattern="/^.+@.+\..+$/">
+            <div ng-messages="editor.mail.$error" role="alert">
+                <div ng-message="pattern">Correo electronico invalido.</div>
+                <div ng-message="required">Correo electronico es requerido.</div>
+            </div>
+        </md-input-container>
+
+        <md-input-container flex="25">
+            <label>Telefono</label>
+            <input type="text" name="phone" ng-model="student.phone" ng-pattern="/[0-9]/">
+            <div ng-messages="editor.phone.$error" role="alert">
+                <div ng-message="pattern">
+                    Numero de telefono invalido
+                </div>
+            </div>
+        </md-input-container>
+
+        <md-input-container flex="25">
+            <label>Celular</label>
+            <input type="text" name="movile" ng-model="student.movile" ng-pattern="/[0-9]/">
+            <div ng-messages="editor.movile.$error" role="alert">
+                <div ng-message="pattern">
+                    Numero de celular invalido
+                </div>
+            </div>
+        </md-input-container>
+
+    </div>
+
+    <div layout="row">
+
+        <md-input-container flex="50">
+            <label>Grado academico</label>
+            <input type="text" ng-model="student.academicGrade">
+        </md-input-container>
+
+        <md-input-container flex="25">
+            <label>CI</label>
+            <input required name="ci" type="text" ng-model="student.ci">
+            <div ng-messages="editor.ci.$error">
+                <div ng-message="required">CI es requerido.</div>
+            </div>
+        </md-input-container>
+
+        <md-input-container flex="25">
+            <md-checkbox ng-model="student.civilState">
+                Estado civil: {{ student.civilState? 'Casado': 'Soltero' }}
+            </md-checkbox>
+        </md-input-container>
+
+    </div>
+
+    <fieldset class="standard">
+        <legend class="legend-text">Datos del conyuge</legend>
+        <md-content layout="row">
+            <md-input-container flex="50">
+                <label>Nombres</label>
+                <input ng-model="student.parnert.firstNameParnert">
+            </md-input-container>
+
+            <md-input-container flex="50">
+                <label>Apellidos</label>
+                <input ng-model="student.parnert.secondNameParnert">
+            </md-input-container>
+        </md-content>
+    </fieldset>
+
+    <fieldset class="standard">
+        <legend class="legend-text">Hijos</legend>
+        <md-content layout="row" ng-repeat="name in student.sons">
+            <md-input-container flex="50">
+                <label>Nombres</label>
+                <input ng-model="name.firstNameSon">
+            </md-input-container>
+
+            <md-input-container flex="50">
+                <label>Apellidos</label>
+                <input ng-model="name.secondNameSon">
+            </md-input-container>
+
+            <md-button class="md-icon-button" aria-label="Favorite" ng-click="deleteNameFromList($index)">
+                <md-tooltip>Eliminar</md-tooltip>
+                <md-icon md-svg-icon="../../assets/img/ic_clear_24px.svg"></md-icon>
+            </md-button>
+        </md-content>
+
+        <md-content layout="row">
+            <md-input-container flex="50">
+                <label>Nombres</label>
+                <input ng-model="nameTemp.firstNameSon">
+            </md-input-container>
+
+            <md-input-container flex="50">
+                <label>Apellidos</label>
+                <input ng-model="nameTemp.secondNameSon">
+            </md-input-container>
+
+            <md-button class="md-icon-button" aria-label="Favorite" ng-click="addNameToList()">
+                <md-tooltip>Agregar</md-tooltip>
+                <md-icon md-svg-icon="../../assets/img/ic_add_24px.svg"></md-icon>
+            </md-button>
+        </md-content>
+
+    </fieldset>
+
+</md-content>

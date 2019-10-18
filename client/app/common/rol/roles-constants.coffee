@@ -1,0 +1,30 @@
+class RolesConstants
+  constructor: () ->
+    angular
+    .module 'roles'
+    .constant('ROLES':
+      'STUDENTS': 'STUDENTS'
+      'TEACHER': 'TEACHER'
+      'AUTHORITIES': 'AUTHORITIES'
+      'SCHEDULES': 'SCHEDULES'
+      'KARDEX': 'KARDEX'
+      'INSCRIPTIONS': 'INSCRIPTIONS'
+      'CREDITS': 'CREDITS'
+      'SUBJECT_ASSIGNMENT': 'SUBJECT_ASSIGNMENT'
+      'NOTE_RECORDS': 'NOTE_RECORDS'
+      'SUBJECTS': 'SUBJECTS'
+      'PENSUMS': 'PENSUMS'
+      'CHURCHES': 'CHURCHES'
+      'GESTIONS': 'GESTIONS'
+      'ROLES': 'ROLES'
+      'CREDITS_REPORT': 'CREDITS_REPORT'
+      'STUDENTS_REPORT': 'STUDENTS_REPORT'
+      'TEACHERS_MISSING_GRADES': 'TEACHERS_MISSING_GRADES'
+      'DEBTORS': 'DEBTORS'
+      'LOGS': 'LOGS'
+      'BACKUP': 'BACKUP'
+      'NOTIFICATIONS': 'NOTIFICATIONS'
+      'BACKUPS_SETTINGS': 'BACKUPS_SETTINGS'
+    )
+
+new RolesConstants()

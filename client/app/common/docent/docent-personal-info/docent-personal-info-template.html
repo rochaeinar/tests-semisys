@@ -1,0 +1,96 @@
+<md-content layout="column" layout-padding="" ng-form="editor">
+
+    <div layout="row">
+
+        <md-input-container flex="50">
+            <label>Nombres</label>
+            <input required name="name" type="text" ng-model="docent.firstName">
+            <div ng-messages="editor.name.$error">
+                <div ng-message="required">Nombre es requerido.</div>
+            </div>
+        </md-input-container>
+
+        <md-input-container flex="50">
+            <label>Apellidos</label>
+            <input required name="lastName" ng-model="docent.lastName">
+            <div ng-messages="editor.lastName.$error">
+                <div ng-message="required">Apellido es requerido.</div>
+            </div>
+        </md-input-container>
+
+    </div>
+
+    <div layout="row">
+
+        <md-input-container flex="50">
+            <label>Ciudad de nacimiento</label>
+            <input ng-model="docent.birtCity">
+        </md-input-container>
+
+        <md-input-container flex="50">
+            <label>CI</label>
+            <input required name="ci" type="text" ng-model="docent.ci">
+            <div ng-messages="editor.ci.$error">
+                <div ng-message="required">CI es requerido.</div>
+            </div>
+        </md-input-container>
+
+    </div>
+
+    <div layout="row">
+
+        <md-input-container flex="50">
+            <label>Correo electronico</label>
+            <input required type="text" name="mail"  ng-model="docent.mail" ng-pattern="/^.+@.+\..+$/">
+            <div ng-messages="editor.mail.$error" role="alert">
+                <div ng-message="pattern">Correo electronico invalido.</div>
+                <div ng-message="required">Correo electronico es requerido.</div>
+            </div>
+        </md-input-container>
+
+        <md-input-container flex="25">
+            <label>Telefono</label>
+            <input type="text" name="phone" ng-model="docent.phone" ng-pattern="/[0-9]/">
+            <div ng-messages="editor.phone.$error" role="alert">
+                <div ng-message="pattern">
+                    Numero de telefono invalido
+                </div>
+            </div>
+        </md-input-container>
+
+        <md-input-container flex="25">
+            <label>Celular</label>
+            <input type="text" name="movile" ng-model="docent.movile" ng-pattern="/[0-9]/">
+            <div ng-messages="editor.movile.$error" role="alert">
+                <div ng-message="pattern">
+                    Numero de celular invalido
+                </div>
+            </div>
+        </md-input-container>
+
+    </div>
+
+    <div layout="row">
+
+        <md-input-container flex="50">
+            <label>Fecha de nacimiento</label>
+            <md-datepicker ng-model="docent.birthDate"></md-datepicker>
+        </md-input-container>
+
+        <md-input-container flex="50">
+            <md-checkbox ng-model="docent.civilState">
+                Estado civil: {{ docent.civilState? 'Casado': 'Soltero' }}
+            </md-checkbox>
+        </md-input-container>
+    </div>
+
+    <div layout="row">
+
+        <md-input-container flex="50">
+            <label>Titulo</label>
+            <input ng-model="docent.degree">
+        </md-input-container>
+
+    </div>
+
+</md-content>

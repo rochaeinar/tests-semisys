@@ -1,0 +1,30 @@
+<md-content layout="column" layout-padding="" ng-form="editor">
+
+    <div layout="row">
+
+        <md-input-container flex="50">
+            <label>Nombre</label>
+            <input required name="name" ng-model="subject.name" type="text">
+            <div ng-messages="editor.name.$error">
+                <div ng-message="required">
+                    Nombre de materia es requerido.
+                </div>
+            </div>
+        </md-input-container>
+
+        <md-input-container flex="50">
+            <label>Codigo</label>
+            <input required name="code" ng-model="subject.code" type="text" ng-pattern="/[0-9]/">
+            <div ng-messages="editor.code.$error" role="alert">
+                <div ng-message="pattern">
+                    Codigo de materia invalido.
+                </div>
+                <div ng-message="required">
+                    Codigo de materia es requerido.
+                </div>
+            </div>
+        </md-input-container>
+
+    </div>
+
+</md-content>

@@ -1,0 +1,72 @@
+.color-light-blue, .btns-map-commands {
+    color: #3181ff;
+}
+
+.color-danger, .error-login, .error-message, .error-authorization {
+    color: #e50000;
+}
+
+.color-warning {
+    color: #FF6400;
+}
+
+.color-green {
+    color: #3a3;
+}
+
+.color-blue-disable {
+    color: #3281ff;
+}
+
+.color-blue, .message-imei {
+    color: #004280;
+}
+
+.color-white {
+    color: #ffffff;
+}
+
+.color-gray {
+    color: #757575;
+}
+
+.background-gray {
+    background-color: #f3f3f3;
+}
+
+.color-blue-container {
+    color: #215a90;
+}
+
+.color-black-85, body, .login-footer a {
+    color: rgba(0, 0, 0, .85);
+}
+
+.color-black-50 {
+    color: rgba(0, 0, 0, .5);
+}
+
+.background-blue {
+    background-color: #004280;
+}
+
+.color-red-modal {
+    color: #e50000;
+}
+
+.color-violet-modal {
+    color: #9f4fff;
+}
+
+.color-green-modal {
+    color: #009500;
+}
+
+.opacity-87 {
+    -khtml-opacity: .87;
+    -moz-opacity: .87;
+    -ms-filter: ”alpha(opacity=87) ”;
+    filter: alpha(opacity=87);
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.87);
+    opacity: .87;
+}

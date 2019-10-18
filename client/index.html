@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="icon" href="assets/img/favicon.png">
+    <!--   STYLE   -->
+    <link href="assets/css/header.css" rel="stylesheet"/>
+    <link href="assets/css/margin.css" rel="stylesheet"/>
+    <link href="assets/css/padding.css" rel="stylesheet"/>
+    <link href="assets/css/fonts.css" rel="stylesheet"/>
+    <link href="assets/css/main.css" rel="stylesheet"/>
+    <link href="assets/css/colors.css" rel="stylesheet"/>
+    <link href="assets/css/modal.css" rel="stylesheet"/>
+    <link href="assets/css/login.css" rel="stylesheet"/>
+    <link href="assets/css/icons.css" rel="stylesheet"/>
+    <link href="assets/css/form.css" rel="stylesheet"/>
+    <link href="assets/css/card.css" rel="stylesheet"/>
+    <link href="assets/css/table.css" rel="stylesheet"/>
+
+    <!-- Angular Material style sheet -->
+    <link rel="stylesheet"
+          href="libs/angular-material/angular-material.min.css">
+
+
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>-->
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script src="libs/angular/angular.min.js"></script>
+    <script src="libs/angular-animate/angular-animate.min.js"></script>
+    <script src="libs/angular-aria/angular-aria.min.js"></script>
+    <script src="libs/angular-messages/angular-messages.min.js"></script>
+    <!-- Angular Material Library -->
+    <script src="libs/angular-material/angular-material.min.js"></script>
+    <!--   LIBS   -->
+    <script src="libs/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="libs/lodash/lodash.min.js"></script>
+    <script src="libs/restangular/dist/restangular.min.js"></script>
+    <script src="libs/angular-cookies/angular-cookies.min.js"></script>
+    <script src='libs/jquery/dist/jquery.js'></script>
+    <script src='libs/js-sha3/build/sha3.min.js'></script>
+    <script src='libs/ngMask/dist/ngMask.min.js'></script>
+    <link href="libs/AngularJS-Toaster/toaster.min.css" rel="stylesheet"/>
+    <script src="libs/angular-animate/angular-animate.min.js"></script>
+    <script src="libs/AngularJS-Toaster/toaster.min.js"></script>
+    <script src="libs/material-steppers/dist/material-steppers.min.js"></script>
+    <link href="libs/material-steppers/dist/material-steppers.min.css" rel="stylesheet">
+    <script src="libs/socket.io-client/dist/socket.io.js"></script>
+    <script src="libs/webcam/dist/webcam.min.js"></script>
+
+    <!-- APP -->
+    <script src="app/app-module.js"></script>
+    <script src="app/app-constants.js"></script>
+    <script src="app/app-config.js"></script>
+    <script src="app/app-run.js"></script>
+    <script src="app/app-service.js"></script>
+
+
+    <!-- Home -->
+
+    <script src="app/main-navigation-controller.js"></script>
+
+    <!-- Login -->
+    <script src="app/login/login-service.js"></script>
+    <script src="app/login/login-controller.js"></script>
+
+    <!-- User -->
+    <script src="app/users/users-directive.js"></script>
+    <link href="app/users/users-style.css" rel="stylesheet"/>
+
+    <!-- Loading -->
+    <script src="app/loading/loading-directive.js"></script>
+    <link href="app/loading/loading-style.css" rel="stylesheet"/>
+
+
+    <script src="app/common/service.js"></script>
+
+    <!-- Sockect -->
+    <script src="app/common/socket/socket-service.js"></script>
+
+    <!-- Student -->
+    <script src="app/common/student/student-service.js"></script>
+    <!-- Student Card -->
+    <script src="app/common/student/student-card/student-card-directive.js"></script>
+    <!-- Student Register -->
+    <script src="app/common/student/student-register/student-register-directive.js"></script>
+    <!-- Student Personal Info -->
+    <script src="app/common/student/student-personal-info/student-personal-info-directive.js"></script>
+    <!-- Student Spititual Info -->
+    <script src="app/common/student/student-spiritual-info/student-spiritual-info-directive.js"></script>
+    <!-- Student View Inicio -->
+    <script src="app/student/student-inicio/student-inicio-config.js"></script>
+    <script src="app/student/student-inicio/student-inicio-controller.js"></script>
+    <!-- Student View Register -->
+    <script src="app/student/student-register/student-register-config.js"></script>
+    <script src="app/student/student-register/student-register-controller.js"></script>
+    <!-- Student View Edit Personal -->
+    <script src="app/student/student-edit-personal/student-edit-personal-config.js"></script>
+    <script src="app/student/student-edit-personal/student-edit-personal-controller.js"></script>
+    <!-- Student View Edit Spiritual -->
+    <script src="app/student/student-edit-spiritual/student-edit-spiritual-config.js"></script>
+    <script src="app/student/student-edit-spiritual/student-edit-spiritual-controller.js"></script>
+
+    <!-- Church Service -->
+    <script src="app/common/church/church-service.js"></script>
+    <!-- Church Card -->
+    <script src="app/common/church/church-card/church-card-directive.js"></script>
+    <!-- Church Register -->
+    <script src="app/common/church/church-register/church-register-directive.js"></script>
+    <!-- Church Info -->
+    <script src="app/common/church/church-info/church-info-directive.js"></script>
+    <!-- Church View Inicio -->
+    <script src="app/church/church-inicio/church-inicio-config.js"></script>
+    <script src="app/church/church-inicio/church-inicio-controller.js"></script>
+    <!-- Church View Register -->
+    <script src="app/church/church-register/church-register-config.js"></script>
+    <script src="app/church/church-register/church-register-controller.js"></script>
+    <!-- Church View Register -->
+    <script src="app/church/church-edit/church-edit-config.js"></script>
+    <script src="app/church/church-edit/church-edit-controller.js"></script>
+
+    <!-- Docent -->
+    <script src="app/common/docent/docent-service.js"></script>
+    <!-- Docent Card -->
+    <script src="app/common/docent/docent-card/docent-card-directive.js"></script>
+    <!-- Docent Register -->
+    <script src="app/common/docent/docent-register/docent-register-directive.js"></script>
+    <!-- Docent Personal Info -->
+    <script src="app/common/docent/docent-personal-info/docent-personal-info-directive.js"></script>
+    <!-- Docent View Inicio -->
+    <script src="app/docent/docent-inicio/docent-inicio-controller.js"></script>
+    <script src="app/docent/docent-inicio/docent-inicio-config.js"></script>
+    <!-- Docent View Register -->
+    <script src="app/docent/docent-register/docent-register-controller.js"></script>
+    <script src="app/docent/docent-register/docent-register-config.js"></script>
+    <!-- Docent View Edit Info -->
+    <script src="app/docent/docent-edit-info/docent-edit-info-controller.js"></script>
+    <script src="app/docent/docent-edit-info/docent-edit-info-config.js"></script>
+
+    <!-- Program -->
+    <script src="app/common/program/program-service.js"></script>
+    <!-- Program Card -->
+    <script src="app/common/program/program-card/program-card-directive.js"></script>
+    <!-- Program Register -->
+    <script src="app/common/program/program-register/program-register-directive.js"></script>
+    <!-- Program Info -->
+    <script src="app/common/program/program-info/program-info-directive.js"></script>
+    <!-- Program View Inicio -->
+    <script src="app/program/program-inicio/program-inicio-controller.js"></script>
+    <script src="app/program/program-inicio/program-inicio-config.js"></script>
+    <!-- Program View Register -->
+    <script src="app/program/program-register/program-register-controller.js"></script>
+    <script src="app/program/program-register/program-register-config.js"></script>
+    <!-- Program View Edit -->
+    <script src="app/program/program-edit/program-edit-controller.js"></script>
+    <script src="app/program/program-edit/program-edit-config.js"></script>
+
+    <!-- Subject -->
+    <script src="app/common/subject/subject-service.js"></script>
+    <!-- Subject Card -->
+    <script src="app/common/subject/subject-card/subject-card-directive.js"></script>
+    <!-- Subject Register -->
+    <script src="app/common/subject/subject-register/subject-register-directive.js"></script>
+    <!-- Subject Info -->
+    <script src="app/common/subject/subject-info/subject-info-directive.js"></script>
+    <!-- Subject View Inicio -->
+    <script src="app/subject/subject-inicio/subject-inicio-controller.js"></script>
+    <script src="app/subject/subject-inicio/subject-inicio-config.js"></script>
+    <!-- Subject View Register -->
+    <script src="app/subject/subject-register/subject-register-controller.js"></script>
+    <script src="app/subject/subject-register/subject-register-config.js"></script>
+    <!-- Subject View Edit -->
+    <script src="app/subject/subject-edit/subject-edit-controller.js"></script>
+    <script src="app/subject/subject-edit/subject-edit-config.js"></script>
+
+    <!-- Timetable -->
+    <script src="app/common/timetable/timetable-config.js"></script>
+    <script src="app/common/timetable/timetable-controller.js"></script>
+
+    <!-- Roles -->
+    <script src="app/roles/roles-list/roles-list-controller.js"></script>
+    <script src="app/roles/roles-list/roles-list-config.js"></script>
+    <script src="app/roles/roles-record/roles-record-controller.js"></script>
+    <script src="app/roles/roles-record/roles-record-config.js"></script>
+    <script src="app/common/rol/roles-service.js"></script>
+    <script src="app/common/rol/roles-service-helper.js"></script>
+    <script src="app/common/rol/roles-constants.js"></script>
+    <script src="app/common/rol/rolestemplate-service.js"></script>
+    <script src="app/common/rol/rol-card/rol-card-directive.js"></script>
+
+    <!-- Gestion -->
+    <script src="app/common/gestion/gestion-service.js"></script>
+    <!-- Gestion Register -->
+    <script src="app/common/gestion/gestion-register/gestion-register-directive.js"></script>
+    <!-- Gestion Card -->
+    <script src="app/common/gestion/gestion-card/gestion-card-directive.js"></script>
+    <!-- Gestion Info -->
+    <script src="app/common/gestion/gestion-info/gestion-info-directive.js"></script>
+    <!-- Gestion View Init-->
+    <script src="app/gestion/gestion-init/gestion-init-controller.js"></script>
+    <script src="app/gestion/gestion-init/gestion-init-config.js"></script>
+    <!-- Gestion View Register-->
+    <script src="app/gestion/gestion-register/gestion-register-controller.js"></script>
+    <script src="app/gestion/gestion-register/gestion-register-config.js"></script>
+    <!-- Gestion View Edit-->
+    <script src="app/gestion/gestion-edit/gestion-edit-controller.js"></script>
+    <script src="app/gestion/gestion-edit/gestion-edit-config.js"></script>
+
+    <!-- Backup -->
+    <script src="app/backup/backup-card/backup-card-directive.js"></script>
+    <script src="app/backup/backup-list/backup-list-controller.js"></script>
+    <script src="app/backup/backup-list/backup-list-config.js"></script>
+    <script src="app/backup/backup-service.js"></script>
+
+    <!-- Authoritie Inicio -->
+    <script src="app/authoritie/authoritie-inicio/authoritie-inicio-controller.js"></script>
+    <script src="app/authoritie/authoritie-inicio/authoritie-inicio-config.js"></script>
+    <!-- Docent View Register -->
+    <script src="app/authoritie/authoritie-register/authoritie-register-controller.js"></script>
+    <script src="app/authoritie/authoritie-register/authoritie-register-config.js"></script>
+    <!-- Docent View Edit Info -->
+    <script src="app/authoritie/authoritie-edit-info/authoritie-edit-info-controller.js"></script>
+    <script src="app/authoritie/authoritie-edit-info/authoritie-edit-info-config.js"></script>
+
+    <!-- Authoritie-->
+    <script src="app/common/authoritie/authoritie-service.js"></script>
+    <!-- Authoritie Register -->
+    <script src="app/common/authoritie/authoritie-register/authoritie-register-directive.js"></script>
+    <!-- Authoritie Info -->
+    <script src="app/common/authoritie/authoritie-info/authoritie-info-directive.js"></script>
+    <!-- Authoritie Card -->
+    <script src="app/common/authoritie/authoritie-card/authoritie-card-directive.js"></script>
+
+    <!-- Camera -->
+    <script src="app/common/camera/camera-directive.js"></script>
+
+    <!-- Menu Service -->
+    <script src="app/common/menu/menu-directive.js"></script>
+
+    <!-- Menu Service -->
+    <script src="app/common/menu/menu-service.js"></script>
+
+    <title>Semi Sys</title>
+</head>
+
+<body ng-app="semi">
+<toaster-container></toaster-container>
+<div ui-view layout-fill></div>
+</body>
+
+</html>

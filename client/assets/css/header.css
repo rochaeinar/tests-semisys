@@ -1,0 +1,27 @@
+.toolbar-tools {
+    min-height: 82px;
+    height: 82px;
+    max-height: 82px;
+}
+
+.logo-header {
+    height: 64px;
+    width: 64px;
+}
+
+.text-header{
+    margin: 8px;
+    vertical-align: middle;
+}
+
+.tool-bar-doc{
+    background-color: #fafafa !important;
+}
+
+.md-sticky-header{
+    overflow: hidden;
+}
+
+.md-sticky-header>md-content{
+    height:90%;
+}

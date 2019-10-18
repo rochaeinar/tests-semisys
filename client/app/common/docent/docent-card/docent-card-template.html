@@ -1,0 +1,46 @@
+<md-card class="card-size">
+    <md-card-title>
+        <md-card-title-media>
+            <div class="md-media-md card-media">
+                <img ng-src="{{ !person.photo ?  '../../assets/img/avatar-default.png' : person.photo}}"/>
+            </div>
+        </md-card-title-media>
+
+        <md-card-title-text class="left-padding">
+            <span class="md-headline"> {{person.firstName}}</span>
+            <span class="md-headline"> {{person.lastName}}</span>
+            <span class="md-subhead"> Docent</span>
+        </md-card-title-text>
+
+        <md-card-actions layout="column">
+
+            <md-button class="md-icon-button" aria-label="Favorite" ng-click="showEditPersonalForm(person)">
+                <md-tooltip>Editar Datos Personales</md-tooltip>
+                <md-icon md-svg-icon="../../assets/img/ic_mode_edit_24px.svg"></md-icon>
+            </md-button>
+
+            <md-button class="md-icon-button" aria-label="Favorite" ng-click="delete(person._id)">
+                <md-tooltip>Eliminar</md-tooltip>
+                <md-icon md-svg-icon="../../assets/img/ic_clear_24px.svg"></md-icon>
+            </md-button>
+
+        </md-card-actions>
+
+    </md-card-title>
+    <md-card-content>
+        <div layout="row">
+            <p>
+                Ciudad de nacimiento:&nbsp<br>
+                Fecha de nacimiento: <br>
+                CI: <br>
+                Celular:
+            </p>
+            <p>
+                {{person.birtCity}}<br>
+                {{person.birthDate | date:"MM/dd/yyyy"}}<br>
+                {{person.ci}}<br>
+                {{person.movile}}
+            </p>
+        </div>
+    </md-card-content>
+</md-card>

@@ -1,0 +1,21 @@
+<md-content layout="column" layout-padding="" layout-align="center">
+    <div layout="row" layout-align="center">
+        <webcam channel="channel"
+                on-streaming="onSuccess()"
+                on-error="onError(err)">
+            <div class="alert alert-error" ng-show="webcamError">
+                <span>Camara no encontrada</span>
+            </div>
+        </webcam>
+
+        <div layout-padding>
+            <md-button class="md-fab md-primary" aria-label="camera" ng-click="makeSnapshot()">
+                <md-icon md-svg-src="../../assets/img/ic_camera_alt_white_24px.svg"></md-icon>
+            </md-button>
+        </div>
+
+        <canvas id="snapshot" width="240" height="240"></canvas>
+
+    </div>
+
+</md-content>

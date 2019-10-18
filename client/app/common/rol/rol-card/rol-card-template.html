@@ -1,0 +1,24 @@
+<md-card class="card-size">
+    <md-card-title>
+
+        <md-card-title-text>
+            <span class="md-subhead">Rol</span>
+            <span class="md-headline">{{rol.name}}</span>
+        </md-card-title-text>
+
+        <md-card-actions layout="column">
+
+            <md-button class="md-icon-button" aria-label="Favorite" ng-click="edit(rol)">
+                <md-tooltip>Editar Rol</md-tooltip>
+                <md-icon md-svg-icon="../../assets/img/ic_mode_edit_24px.svg"></md-icon>
+            </md-button>
+
+            <md-button class="md-icon-button" aria-label="Favorite" ng-click="delete(rol._id)">
+                <md-tooltip>Eliminar</md-tooltip>
+                <md-icon md-svg-icon="../../assets/img/ic_clear_24px.svg"></md-icon>
+            </md-button>
+
+        </md-card-actions>
+
+    </md-card-title>
+</md-card>

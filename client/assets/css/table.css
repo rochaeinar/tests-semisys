@@ -1,0 +1,37 @@
+.table-header {
+    padding: 16px;
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 20px;
+    background-color: rgb(80, 125, 210);
+    border-right: 1px solid rgba(255, 255, 255, 0.87);
+}
+
+.table-header-end {
+    padding: 16px;
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 20px;
+    background-color: rgb(80, 125, 210);
+}
+
+.table-row-checkbox {
+    padding-top: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 20px;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+    border-left: 1px solid rgba(0, 0, 0, 0.10);
+}
+
+.table-row-checkbox-end {
+    padding-top: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 20px;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+    border-left: 1px solid rgba(0, 0, 0, 0.10);
+    border-right: 1px solid rgba(0, 0, 0, 0.10);
+}

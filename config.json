@@ -1,0 +1,27 @@
+{
+  "server": {
+    "ip": "localhost",
+    "port": "3000",
+    "portSSL": "4000"
+  },
+  "certs": {
+    "key": "certs/server.key.pem",
+    "crt": "certs/server.crt.pem",
+    "int": "certs/server.int.pem"
+  },
+  "mongodb": {
+    "host": "localhost",
+    "userMongo": "admin",
+    "port": 27017,
+    "database": "semidb",
+    "username": "rwuser",
+    "password": "rwuser"
+  },
+  "token": {
+    "lifetime_seconds": 900,
+    "publicKey": "MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKgkkgHcHPgsHj++4bso8qM4sXsLAJcXhP90prFNTPMLDylP3CT/dZ+vfCzdvM1AUqx2TPjkvvyyWhDePRdya8ECAwEAAQ=="
+  },
+  "backup": {
+    "folder": "d:\\BackupSemiSys\\"
+  }
+}

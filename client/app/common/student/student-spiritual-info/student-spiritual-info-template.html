@@ -1,0 +1,56 @@
+<md-content layout="column" layout-padding="" ng-form="editor">
+
+    <div layout="row">
+
+        <md-input-container flex="50">
+            <label>Iglesia de procedencia</label>
+            <md-select required name="chuch" ng-model="student.church.churchId">
+                <md-option ng-repeat="church in listChurches" value="{{church._id}}">
+                    {{church.name}}
+                </md-option>
+            </md-select>
+            <div ng-messages="editor.chuch.$error">
+                <div ng-message="required">Iglesia es requerido.</div>
+            </div>
+        </md-input-container>
+
+        <md-input-container flex="50">
+            <label>Nombre del pastor</label>
+            <input required name="minister" ng-model="student.church.minister">
+            <div ng-messages="editor.minister.$error">
+                <div ng-message="required">Nombre ministro es requerido.</div>
+            </div>
+        </md-input-container>
+
+    </div>
+
+
+    <div layout="row">
+
+        <md-input-container flex="50">
+            <label>Ciudad de bautismo</label>
+            <input ng-model="student.church.city">
+        </md-input-container>
+
+        <md-input-container flex="50">
+            <label>Fecha de bautismo</label>
+            <md-datepicker ng-model="student.church.date"></md-datepicker>
+        </md-input-container>
+
+    </div>
+
+    <div layout="row">
+
+        <md-input-container flex="100">
+            <md-chips ng-model="student.church.charges" name="fruitName" readonly="false"
+                      md-removable="true" md-max-chips="10" md-transform-chip="newCharge($chip)"
+                      placeholder="Cargo o ministerio realizado">
+                <md-chip-template>
+                    <strong>{{$chip.charge}}</strong>
+                </md-chip-template>
+            </md-chips>
+        </md-input-container>
+
+    </div>
+
+</md-content>

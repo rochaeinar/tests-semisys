@@ -1,0 +1,72 @@
+<md-content class="layout-fill">
+    <md-toolbar class="tool-bar-doc md-whiteframe-z1">
+        <div class="md-toolbar-tools toolbar-tools">
+            <md-input-container class="md-block" flex="40">
+                <label>Rol</label>
+                <input ng-model="RolesRecordController.rol.name">
+            </md-input-container>
+            <span flex></span>
+            <md-button class="md-raised md-primary"
+                       ng-click="RolesRecordController.save()">
+                <md-tooltip>Guardar Permisos</md-tooltip>
+                <md-icon md-svg-src="../../assets/img/ic_add_48px.svg"></md-icon>
+                Guardar
+            </md-button>
+        </div>
+    </md-toolbar>
+    <div class="padding-16">
+        <div layout="row" layout-wrap>
+            <div class="table-header" flex="auto">
+                Permiso
+            </div>
+            <div class="table-header" flex="15">
+                Ver
+            </div>
+            <div class="table-header" flex="15">
+                Agregar
+            </div>
+            <div class="table-header" flex="15">
+                Editar
+            </div>
+            <div class="table-header-end" flex="15">
+                Borrar
+            </div>
+        </div>
+        <div layout="row" layout-wrap flex ng-repeat="item in RolesRecordController.rol.permissions">
+            <div class="table-row-checkbox" flex-xs flex="auto">
+                <md-checkbox
+                        aria-label="item.name"
+                        ng-checked="RolesRecordController.isAllSelected(item)"
+                        md-indeterminate="RolesRecordController.isIndeterminate(item)"
+                        ng-click="RolesRecordController.onCheckboxClick(item, 'all')">
+                    {{item.name}}
+                </md-checkbox>
+            </div>
+            <div class="table-row-checkbox" flex="15">
+                <md-checkbox aria-label="item.name"
+                             ng-checked="item.view"
+                             ng-click="RolesRecordController.onCheckboxClick(item, 'view')">
+                </md-checkbox>
+            </div>
+            <div class="table-row-checkbox" flex="15">
+                <md-checkbox aria-label="item.name"
+                             ng-checked="item.add"
+                             ng-click="RolesRecordController.onCheckboxClick(item, 'add')">
+                </md-checkbox>
+            </div>
+            <div class="table-row-checkbox" flex="15">
+                <md-checkbox aria-label="item.name"
+                             ng-checked="item.edit"
+                             ng-click="RolesRecordController.onCheckboxClick(item, 'edit')">
+                </md-checkbox>
+            </div>
+            <div class="table-row-checkbox-end" flex="15">
+                <md-checkbox aria-label="item.name"
+                             ng-checked="item.delete"
+                             ng-click="RolesRecordController.onCheckboxClick(item, 'delete')">
+                </md-checkbox>
+            </div>
+        </div>
+    </div>
+
+</md-content>

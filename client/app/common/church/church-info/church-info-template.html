@@ -1,0 +1,44 @@
+<md-content layout="column" layout-padding="" ng-form="editor">
+
+    <div layout="row">
+
+        <md-input-container flex="50">
+            <label>Nombre</label>
+            <input required name="name" ng-model="church.name" type="text">
+            <div ng-messages="editor.name.$error">
+                <div ng-message="required">
+                    Nombre de iglesia es requerido.
+                </div>
+            </div>
+        </md-input-container>
+
+        <md-input-container flex="50">
+            <label>Direccion</label>
+            <input required name="address" ng-model="church.address" type="text">
+            <div ng-messages="editor.address.$error">
+                <div ng-message="required">
+                    Direccion es requerido.
+                </div>
+            </div>
+        </md-input-container>
+
+    </div>
+
+    <div layout="row">
+
+        <md-input-container flex="50">
+            <label>Ciudad</label>
+            <input ng-model="church.city" type="text">
+        </md-input-container>
+
+        <md-input-container flex="50">
+            <label>Denominacion</label>
+            <input ng-model="church.denomination" type="text">
+        </md-input-container>
+
+    </div>
+
+</md-content>
+
+
+

@@ -1,0 +1,121 @@
+{
+	"variables": [],
+	"info": {
+		"name": "SemiSys",
+		"_postman_id": "875c20d5-02a2-9241-077d-7709f24f65a4",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"var token = jsonData.data.token;",
+							"postman.setEnvironmentVariable(\"token\", token);",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://{{server}}:{{port}}/api/login",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"admin\",\n\t\"pass\": \"5a38afb1a18d408e6cd367f9db91e2ab9bce834cdad3da24183cc174956c20ce35dd39c2bd36aae907111ae3d6ada353f7697a5f1a8fc567aae9e4ca41a9d19d\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Roles",
+			"request": {
+				"url": "https://{{server}}:{{port}}/api/roles",
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add Role",
+			"request": {
+				"url": "https://{{server}}:{{port}}/api/roles",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"name\": \"Administrador\",\r\n      \"permissions\":\r\n        [\r\n          {\r\n            \"key\": \"STUDENTS\",\r\n            \"name\": \"Estudiantes\",\r\n            \"view\": true,\r\n            \"add\": true,\r\n            \"edit\": true,\r\n            \"delete\": true\r\n          },\r\n          {\r\n            \"key\": \"TEACHER\",\r\n            \"name\": \"Docentes\",\r\n            \"view\": true,\r\n            \"add\": true,\r\n            \"edit\": true,\r\n            \"delete\": true\r\n          },\r\n          {\r\n            \"key\": \"AUTHORITIES\",\r\n            \"name\": \"Autoridades\",\r\n            \"view\": true,\r\n            \"add\": true,\r\n            \"edit\": true,\r\n            \"delete\": true\r\n          },\r\n          {\r\n            \"key\": \"SCHEDULES\",\r\n            \"name\": \"Horarios\",\r\n            \"view\": true,\r\n            \"add\": true,\r\n            \"edit\": true,\r\n            \"delete\": true\r\n          },\r\n          {\r\n            \"key\": \"KARDEX\",\r\n            \"name\": \"Kardex\",\r\n            \"view\": true,\r\n            \"add\": true,\r\n            \"edit\": true,\r\n            \"delete\": true\r\n          },\r\n          {\r\n            \"key\": \"INSCRIPTIONS\",\r\n            \"name\": \"Inscripciones\",\r\n            \"view\": true,\r\n            \"add\": true,\r\n            \"edit\": true,\r\n            \"delete\": true\r\n          },\r\n          {\r\n            \"key\": \"CREDITS\",\r\n            \"name\": \"Creditos\",\r\n            \"view\": true,\r\n            \"add\": true,\r\n            \"edit\": true,\r\n            \"delete\": true\r\n          },\r\n          {\r\n            \"key\": \"SUBJECT_ASSIGNMENT\",\r\n            \"name\": \"Signacion de Materias\",\r\n            \"view\": true,\r\n            \"add\": true,\r\n            \"edit\": true,\r\n            \"delete\": true\r\n          },\r\n          {\r\n            \"key\": \"NOTE_RECORDS\",\r\n            \"name\": \"Registro de Notas\",\r\n            \"view\": true,\r\n            \"add\": true,\r\n            \"edit\": true,\r\n            \"delete\": true\r\n          },\r\n          {\r\n            \"key\": \"SUBJECTS\",\r\n            \"name\": \"Materias\",\r\n            \"view\": true,\r\n            \"add\": true,\r\n            \"edit\": true,\r\n            \"delete\": true\r\n          },\r\n          {\r\n            \"key\": \"PENSUMS\",\r\n            \"name\": \"Pensums\",\r\n            \"view\": true,\r\n            \"add\": true,\r\n            \"edit\": true,\r\n            \"delete\": true\r\n          },\r\n          {\r\n            \"key\": \"CHURCHES\",\r\n            \"name\": \"Iglesias\",\r\n            \"view\": true,\r\n            \"add\": true,\r\n            \"edit\": true,\r\n            \"delete\": true\r\n          },\r\n          {\r\n            \"key\": \"GESTIONS\",\r\n            \"name\": \"Gestiones\",\r\n            \"view\": true,\r\n            \"add\": true,\r\n            \"edit\": true,\r\n            \"delete\": true\r\n          },\r\n          {\r\n            \"key\": \"ROLES\",\r\n            \"name\": \"Roles\",\r\n            \"view\": true,\r\n            \"add\": true,\r\n            \"edit\": true,\r\n            \"delete\": true\r\n          },\r\n          {\r\n            \"key\": \"CREDITS_REPORT\",\r\n            \"name\": \"Reportes de Creditos\",\r\n            \"view\": true,\r\n            \"add\": true,\r\n            \"edit\": true,\r\n            \"delete\": true\r\n          },\r\n          {\r\n            \"key\": \"STUDENTS_REPORT\",\r\n            \"name\": \"Reportes de Estudiantes\",\r\n            \"view\": true,\r\n            \"add\": true,\r\n            \"edit\": true,\r\n            \"delete\": true\r\n          },\r\n          {\r\n            \"key\": \"TEACHERS_MISSING_GRADES\",\r\n            \"name\": \"Docentes Sin Notas\",\r\n            \"view\": true,\r\n            \"add\": true,\r\n            \"edit\": true,\r\n            \"delete\": true\r\n          },\r\n          {\r\n            \"key\": \"DEBTORS\",\r\n            \"name\": \"Deudores\",\r\n            \"view\": true,\r\n            \"add\": true,\r\n            \"edit\": true,\r\n            \"delete\": true\r\n          },\r\n          {\r\n            \"key\": \"LOGS\",\r\n            \"name\": \"Logs\",\r\n            \"view\": true,\r\n            \"add\": true,\r\n            \"edit\": true,\r\n            \"delete\": true\r\n          },\r\n          {\r\n            \"key\": \"BACKUP\",\r\n            \"name\": \"Copias de Seguridad\",\r\n            \"view\": true,\r\n            \"add\": true,\r\n            \"edit\": true,\r\n            \"delete\": true\r\n          },\r\n          {\r\n            \"key\": \"NOTIFICATIONS\",\r\n            \"name\": \"Notificaciones\",\r\n            \"view\": true,\r\n            \"add\": true,\r\n            \"edit\": true,\r\n            \"delete\": true\r\n          },\r\n          {\r\n            \"key\": \"BACKUPS_SETTINGS\",\r\n            \"name\": \"Configuracion de Copias seguridad\",\r\n            \"view\": true,\r\n            \"add\": true,\r\n            \"edit\": true,\r\n            \"delete\": true\r\n          }\r\n        ]\r\n    }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Rol",
+			"request": {
+				"url": "https://{{server}}:{{port}}/api/roles/595aeaad1fd7d421ccbc3777",
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Rol Template",
+			"request": {
+				"url": "https://{{server}}:{{port}}/api/roltemplate",
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

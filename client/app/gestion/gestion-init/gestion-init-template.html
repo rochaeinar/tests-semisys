@@ -1,0 +1,18 @@
+<md-content class="layout-fill">
+    <md-toolbar class="tool-bar-doc md-whiteframe-z1">
+        <div class="md-toolbar-tools">
+            <span flex></span>
+            <md-button class="md-raised md-primary"
+                       ng-click="GestionInitController.add()">
+                <md-tooltip>Crear gestion</md-tooltip>
+                <md-icon md-svg-src="../../assets/img/ic_add_48px.svg"></md-icon>
+                Crear gestion
+            </md-button>
+        </div>
+    </md-toolbar>
+
+    <div layout="row" layout-wrap>
+        <gestion-card ng-repeat="c in GestionInitController.gestions" gestion="c"></gestion-card>
+    </div>
+
+</md-content>

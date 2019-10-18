@@ -1,0 +1,40 @@
+<md-card class="card-size">
+    <md-card-title>
+
+        <md-card-title-text>
+            <span class="md-headline"> {{program.name}}</span>
+            <span class="md-headline"> {{program.code}}</span>
+            <span class="md-subhead"> Programa academico</span>
+        </md-card-title-text>
+
+        <md-card-actions layout="column">
+
+            <md-button class="md-icon-button" aria-label="Favorite" ng-click="showEditForm(program)">
+                <md-tooltip>Editar Programa Academico</md-tooltip>
+                <md-icon md-svg-icon="../../assets/img/ic_mode_edit_24px.svg"></md-icon>
+            </md-button>
+
+            <md-button class="md-icon-button" aria-label="Favorite" ng-click="delete(program._id)">
+                <md-tooltip>Eliminar</md-tooltip>
+                <md-icon md-svg-icon="../../assets/img/ic_clear_24px.svg"></md-icon>
+            </md-button>
+
+        </md-card-actions>
+
+    </md-card-title>
+    <md-card-content>
+        <md-list>
+            <md-subheader class="md-no-sticky">Lista de materias</md-subheader>
+            <md-divider></md-divider>
+            <md-list-item ng-repeat="subject in program.subjects">
+                <p ng-model="(subjects | filter:{_id: subject.id})[0].code" flex="50">
+                    {{ (subjects | filter:subject.id)[0].code }}
+                </p>
+                <p ng-model="(subjects | filter:subject.id)[0].name" flex="50">
+                    {{ (subjects | filter:subject.id)[0].name }}
+                </p>
+                <md-divider></md-divider>
+            </md-list-item>
+        </md-list>
+    </md-card-content>
+</md-card>

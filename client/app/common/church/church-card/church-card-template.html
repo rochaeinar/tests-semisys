@@ -1,0 +1,36 @@
+<md-card class="card-size">
+    <md-card-title>
+        <md-card-title-text>
+            <span class="md-headline"> {{church.name}}</span>
+            <span class="md-subhead"> Iglesia</span>
+        </md-card-title-text>
+
+        <md-card-actions layout="column">
+
+            <md-button class="md-icon-button" aria-label="Favorite" ng-click="showEditForm(church)">
+                <md-tooltip>Editar</md-tooltip>
+                <md-icon md-svg-icon="../../assets/img/ic_mode_edit_24px.svg"></md-icon>
+            </md-button>
+
+            <md-button class="md-icon-button" aria-label="Favorite" ng-click="delete(church._id)">
+                <md-tooltip>Eliminar</md-tooltip>
+                <md-icon md-svg-icon="../../assets/img/ic_clear_24px.svg"></md-icon>
+            </md-button>
+
+        </md-card-actions>
+    </md-card-title>
+    <md-card-content>
+        <div layout="row">
+            <p>
+                Ciudad:&nbsp<br>
+                Direccion:&nbsp<br>
+                Denominacion: <br>
+            </p>
+            <p>
+                {{church.city}}<br>
+                {{church.address}}<br>
+                {{church.denomination}}
+            </p>
+        </div>
+    </md-card-content>
+</md-card>

@@ -1,0 +1,37 @@
+<md-stepper id="stepper-register"
+            md-vertical="false"
+            md-linear="true"
+            md-alternative="true">
+    <md-step md-label="Datos personales">
+        <form name="stepBody1">
+            <md-step-body>
+                <md-content>
+                    <authoritie-info authoritie="authoritie"></authoritie-info>
+                </md-content>
+            </md-step-body>
+            <md-step-actions>
+                <md-content layout="row" layout-align="center">
+                    <md-button class="md-primary md-raised" ng-disabled="stepBody1.$invalid" ng-click="next()">
+                        Siguiente
+                    </md-button>
+                    <span flex="10"></span>
+                    <md-button class="md-primary md-raised" ng-click="cancel()">Cancelar</md-button>
+                </md-content>
+            </md-step-actions>
+        </form>
+    </md-step>
+    <md-step md-label="Fotografia">
+        <md-step-body>
+            <camera photo="authoritie.photo"></camera>
+        </md-step-body>
+        <md-step-actions>
+            <md-content layout="row" layout-align="center">
+                <md-button type="submit" class="md-primary md-raised" ng-click="add()">
+                    Registrar
+                </md-button>
+                <span flex="10"></span>
+                <md-button class="md-primary md-raised" ng-click="cancel()">Cancelar</md-button>
+            </md-content>
+        </md-step-actions>
+    </md-step>
+</md-stepper>

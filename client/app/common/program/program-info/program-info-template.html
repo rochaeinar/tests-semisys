@@ -1,0 +1,68 @@
+<md-content layout="column" layout-padding="" ng-form="editor">
+
+    <div layout="row">
+
+        <md-input-container flex="50">
+            <label>Nombre</label>
+            <input required name="name" ng-model="program.name" type="text">
+            <div ng-messages="editor.name.$error">
+                <div ng-message="required">
+                    Nombre de programa es requerido.
+                </div>
+            </div>
+        </md-input-container>
+
+        <md-input-container flex="50">
+            <label>Codigo</label>
+            <input required name="code" ng-model="program.code" type="text" ng-pattern="/[0-9]/">
+            <div ng-messages="editor.code.$error" role="alert">
+                <div ng-message="pattern">
+                    Codigo de programa invalido.
+                </div>
+                <div ng-message="required">
+                    Codigo de programa es requerido.
+                </div>
+            </div>
+        </md-input-container>
+
+    </div>
+
+    <fieldset class="standard">
+        <legend class="legend-text">Materias</legend>
+        <md-content layout="row" ng-repeat="subject in program.subjects">
+            <md-input-container flex="50">
+                <label>{{ (listSubjects | filter:subject.id)[0].name }}</label>
+                <input ng-model="(listSubjects | filter:{_id: subject.id})[0].name">
+            </md-input-container>
+
+            <md-input-container flex="50">
+                <label>{{ (listSubjects | filter:subject.id)[0].code }}</label>
+                <input ng-model="(listSubjects | filter:{_id: subject.id})[0].code">
+            </md-input-container>
+
+            <md-button class="md-icon-button" aria-label="Favorite" ng-click="deleteItemFromList($index)">
+                <md-tooltip>Eliminar</md-tooltip>
+                <md-icon md-svg-icon="../../assets/img/ic_clear_24px.svg"></md-icon>
+            </md-button>
+        </md-content>
+
+        <md-content layout="row">
+
+            <md-input-container flex="40">
+                <label>Materia</label>
+                <md-select ng-model="item.id">
+                    <md-option ng-repeat="subject in listSubjects" ng-value="subject._id">
+                        {{subject.code +' '+ subject.name}}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+
+            <md-button class="md-icon-button" aria-label="Favorite" ng-click="addItem()">
+                <md-tooltip>Agregar</md-tooltip>
+                <md-icon md-svg-icon="../../assets/img/ic_add_24px.svg"></md-icon>
+            </md-button>
+        </md-content>
+
+    </fieldset>
+
+</md-content>

@@ -1,0 +1,18 @@
+<md-content class="layout-fill">
+    <md-toolbar class="tool-bar-doc md-whiteframe-z1">
+        <div class="md-toolbar-tools">
+            <span flex></span>
+            <md-button class="md-raised md-primary"
+                       ng-click="SubjectInicioController.showForm()">
+                <md-tooltip>Registrar materia</md-tooltip>
+                <md-icon md-svg-src="../../assets/img/ic_add_48px.svg"></md-icon>
+                Registrar
+            </md-button>
+        </div>
+    </md-toolbar>
+
+    <div layout="row" layout-wrap>
+        <subject-card ng-repeat="s in SubjectInicioController.subjects" subject="s"></subject-card>
+    </div>
+
+</md-content>

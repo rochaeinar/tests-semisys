@@ -1,0 +1,52 @@
+<md-content layout="column">
+
+    <md-toolbar>
+
+        <div class="md-toolbar-tools">
+            <md-button class="md-icon-button" ng-click="mainNavigationController.toggleSidenav('left-1')" hide-gt-md="">
+                <md-tooltip>Opciones</md-tooltip>
+                <md-icon md-svg-src="../../assets/img/ic_menu_48px.svg"></md-icon>
+            </md-button>
+            <img src="../../assets/img/logo64.png" class="logo-header" alt="">
+            <h3>
+                <span class="text-header">Semi Sys</span>
+            </h3>
+            <span flex></span>
+
+            <a>{{mainNavigationController.token.name}}</a>
+            <md-button class="md-icon-button navbar-logout" aria-label="Logout"
+                       ng-click="mainNavigationController.logout()">
+                <md-icon md-svg-icon="../../assets/img/logout.svg"></md-icon>
+                <md-tooltip>Cerrar sesion</md-tooltip>
+            </md-button>
+
+        </div>
+
+    </md-toolbar>
+
+</md-content>
+
+
+<md-content layout="column" layout-fill>
+    <div layout="row">
+
+        <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z1 md-sticky-header"
+                    md-component-id="left-1"
+                    md-is-locked-open="$mdMedia('gt-md')">
+            <md-toolbar class="tool-bar-doc md-hue-3">
+                <div class="md-toolbar-tools">
+                    <h3>{{mainNavigationController.current}}</h3>
+                </div>
+            </md-toolbar>
+
+        <menu-side></menu-side>
+
+        </md-sidenav>
+
+        <md-content class="layout-fill">
+            <div ui-view></div>
+        </md-content>
+
+    </div>
+</md-content>
+

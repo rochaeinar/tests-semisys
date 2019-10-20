@@ -7,9 +7,11 @@ class Users
     entity = new Schema
       userName:
         type: String
+        index: true
         unique: true
       password:
         type: String
+        required: true
       token:
         type: String
       tokenExpiration:

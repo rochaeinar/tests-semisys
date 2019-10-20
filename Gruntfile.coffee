@@ -14,7 +14,7 @@ module.exports = (grunt) ->
         ext: ".js"
     copy:
       client:
-        src: ['certs/**', 'client/**/*.html', 'client/**/*.css', 'client/assets/**', 'clienthttp/**']
+        src: ['certs/**', 'client/**/*.html', 'client/**/*.css', 'client/assets/**', 'clienthttp/**', 'test/**']
         expand: true
         dest: 'build/'
       json:

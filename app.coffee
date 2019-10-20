@@ -22,7 +22,7 @@ class App
     http.get '/', @requestServerHttp
 
   httpServer: =>
-    console.log "server is running in the port: #{@config.server.port}"
+    console.log "server is running on: http://#{@config.server.ip}:#{@config.server.portSSL}"
 
   functionInterceptor: (req, res, next) =>
     next()

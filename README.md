@@ -9,5 +9,16 @@
 ```npm install
 bower install
 grunt default
+npm install
 npm run start_server
 ```
+
+## Execute Unit Test
+```npm install
+bower install
+grunt default
+npm install
+npm run test
+```
+> Unit Test Execution.
+![](https://github.com/rochaeinar/tests-semisys/blob/master/backend_unit_test.jpg)

@@ -9,6 +9,7 @@
 ```npm install
 bower install
 grunt default
+npm install
 npm run start_server
 ```
 
@@ -16,6 +17,7 @@ npm run start_server
 ```npm install
 bower install
 grunt default
+npm install
 npm run test
 ```
 > Unit Test Execution.

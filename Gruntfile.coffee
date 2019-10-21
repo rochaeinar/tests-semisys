@@ -21,12 +21,19 @@ module.exports = (grunt) ->
         src: ['config.json', 'package.json', 'bower.json', '.bowerrc']
         expand: true
         dest: 'build/'
+    shell:
+      integration:
+        command: 'cucumber-js integration/features -r integration/steps'
 
   #Load Tasks
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-contrib-copy'
+  grunt.loadNpmTasks('grunt-shell');
   grunt.registerTask 'default', [
     'coffee'
     'copy:client'
     'copy:json'
+  ]
+  grunt.registerTask 'integration-tests', [
+    'shell:integration'
   ]

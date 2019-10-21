@@ -16,8 +16,6 @@ class LoginRoute
   loginUser: (request, response) =>
     if request.body.name and request.body.pass and request.body.pass.length > 1
       onSuccess = (data, error) =>
-        console.log data
-        console.log error
         if data
           res.ok response, data
         else

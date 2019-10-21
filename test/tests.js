@@ -12,8 +12,6 @@
                 mongoose.connection.db.dropDatabase();
 
                 User = require('../build/entities/users');
-                // This is the right model because ^registerModels set it up for us.
-                //User = mongoose.model('Users');
                 done();
             });
         });

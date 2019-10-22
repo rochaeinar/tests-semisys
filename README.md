@@ -28,8 +28,18 @@ npm run test
 - Prerequisites: Have the app running
 
 ```
-grunt integration-tests
+npm run integration-test
 ```
 
 > Integration Test Execution.
 ![](https://github.com/rochaeinar/tests-semisys/blob/master/integration_tests.jpg)
+
+
+## Execute UI Test
+
+```
+npm run ui-test
+```
+
+> UI Test Execution.
+![](https://github.com/rochaeinar/tests-semisys/blob/master/ui-test.jpg)

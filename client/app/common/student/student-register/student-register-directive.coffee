@@ -16,7 +16,7 @@ class StudentRegister
 
   add: () =>
     @scope.student.password = sha3_512 @scope.student.ci
-    @studentService.addNewStudent @scope.student
+    @studentService.add @scope.student
     .then @onSuccessAdding
     return
 

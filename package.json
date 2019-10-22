@@ -6,7 +6,9 @@
     "npm_install": "npm install ",
     "bower_install": "bower install",
     "start_server": "nodemon build/app.js",
-    "test": "mocha test/tests.js"
+    "test": "mocha test/tests.js",
+    "integration-test": "cucumber-js integration/features -r integration/steps",
+    "ui-test": "protractor ui-test/conf.js"
   },
   "dependencies": {
     "body-parser": "^1.19.0",

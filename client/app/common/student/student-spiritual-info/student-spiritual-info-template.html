@@ -4,11 +4,7 @@
 
         <md-input-container flex="50">
             <label>Iglesia de procedencia</label>
-            <md-select required name="chuch" ng-model="student.church.churchId">
-                <md-option ng-repeat="church in listChurches" value="{{church._id}}">
-                    {{church.name}}
-                </md-option>
-            </md-select>
+            <input required name="church" ng-model="student.church.churchId">
             <div ng-messages="editor.chuch.$error">
                 <div ng-message="required">Iglesia es requerido.</div>
             </div>
@@ -32,10 +28,6 @@
             <input ng-model="student.church.city">
         </md-input-container>
 
-        <md-input-container flex="50">
-            <label>Fecha de bautismo</label>
-            <md-datepicker ng-model="student.church.date"></md-datepicker>
-        </md-input-container>
 
     </div>
 
